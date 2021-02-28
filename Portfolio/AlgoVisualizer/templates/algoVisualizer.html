@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-{% load static %}
 
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Rozach - Algorithm Visualizations</title>
-    <link rel="icon" href="{% static 'AlgoVisualizer/img/favicon.ico' %}" type="image/x-icon"></link>
-    <link rel="stylesheet" href="{% static 'AlgoVisualizer/css/style.css' %}"></link>
+    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link rel="stylesheet" href="/static/css/style.css"></link>
 </head>
 
 <body>
@@ -37,12 +41,14 @@
                 <div class="selection-bubble"></div>
             </ul>
         </nav>
-
     </header>
 
     <main id="main">
-        <h2>ALGORITHMS</h2>
+        <div id="app">
+            <h2>ALGORITHMS</h2>
+        </div>
     </main>
+    <script src="/static/js/main.js"></script>
 </body>
 
 </html>

@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('algorithm-visualizations/', include('AlgoVisualizer.urls')),
     path('spotify-web-player/', include('SpotifyWebPlayer.urls')),
+    path('cloud/', include('Cloud.urls')),
     path('', indexView),
 ]

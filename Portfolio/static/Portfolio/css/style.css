@@ -1,9 +1,20 @@
+/************************ Root ************************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: consolas;
 }
+
+/************************ Modal ************************/
+
+.modal-content {
+    min-width: 20rem;
+    min-height: 20rem;
+    border: 1rem solid blue;
+}
+
+/************************ Scroll-Bar ************************/
 
 ::-webkit-scrollbar {
     width: 0;
@@ -17,6 +28,8 @@
     height: 10px;
     background: rgba(255, 255, 255, 0);
 }
+
+/************************ Horizontal Rainbow-Progress-Bar ************************/
 
 #progress-bar {
     position: fixed;
@@ -60,48 +73,46 @@
     }
 }
 
+/************************ Animated Rozach-Logo ************************/
+
 #logo-svg {
-    position: absolute;
-    top: 50%;
-    left: 4rem;
-    fill: transparent;
-    transform: translateY(-50%);
+    height: 100%;
 }
 
 #logo-svg path:nth-child(1) {
     stroke-dasharray: 187.91128540039062;
     stroke-dashoffset: 187.91128540039062;
-    animation: logo-animation 1s ease forwards;
+    animation: logo-animation 1s ease forwards .1s;
 }
 
 #logo-svg path:nth-child(2) {
     stroke-dasharray: 132.7279815673828;
     stroke-dashoffset: 132.7279815673828;
-    animation: logo-animation 1s ease forwards 0.3s;
+    animation: logo-animation 1s ease forwards .12s;
 }
 
 #logo-svg path:nth-child(3) {
     stroke-dasharray: 128.09532165527344;
     stroke-dashoffset: 128.09532165527344;
-    animation: logo-animation 1s ease forwards 0.6s;
+    animation: logo-animation 1s ease forwards .14s;
 }
 
 #logo-svg path:nth-child(4) {
     stroke-dasharray: 150.5275115966797;
     stroke-dashoffset: 150.5275115966797;
-    animation: logo-animation 1s ease forwards 0.9s;
+    animation: logo-animation 1s ease forwards .16s;
 }
 
 #logo-svg path:nth-child(5) {
     stroke-dasharray: 121.61630249023438;
     stroke-dashoffset: 121.61630249023438;
-    animation: logo-animation 1s ease forwards 1.2s;
+    animation: logo-animation 1s ease forwards .18s;
 }
 
 #logo-svg path:nth-child(6) {
     stroke-dasharray: 153.18829345703125;
     stroke-dashoffset: 153.18829345703125;
-    animation: logo-animation 1s ease forwards 1.5s;
+    animation: logo-animation 1s ease forwards .2s;
 }
 
 @keyframes logo-animation {
@@ -122,147 +133,266 @@
     }
 }
 
-header {
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
-    position: sticky;
-    left: 0px;
-    top: 0px;
-    background: rgb(41, 41, 41);
-    z-index: 4;
-}
 
-nav {
-    min-height: 10vh;
-    margin: auto;
-    width: 90%;
+/************************ Navigation-Panel ************************/
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between;
+    transition: 0.7s;
+    padding: 40px 100px;
+    z-index: 10;
 }
 
-nav h1,
-nav ul {
+@media (max-width: 1200px) {
+    #navbarNav {
+        height: 100vh;
+        transition: 0.7s;
+    }
+}
+
+@media (min-width: 1200px) {
+    #navbarNav {
+        height: 10vh;
+        transition: 0.7s;
+    }
+}
+
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 10vh;
+    z-index: 10;
+}
+
+
+#navbarNav ul li {
+    position: relative;
+    min-width: 150px;
+}
+
+#navbarNav ul li a {
+    position: relative;
     font-size: 1.5rem;
-    flex: 1;
+    float: right;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
 
-nav a {
-    color: lightgray;
-    text-decoration: none;
-}
 
-.selection-bubble {
-    position: absolute;
-    background: orange;
-    transform: scale(1.5);
-    transition: all 0.3s ease-in-out;
-    border-radius: 1rem;
-    z-index: -2;
-}
+/************************ Body-Panel ************************/
 
 body {
     overflow: hidden;
     overflow-y: scroll;
 }
 
+/************************ Main-Panel ************************/
+
 #main {
+    position: relative;
+    
+    padding-top: 10vh;
     min-height: 100vh;
     background: gray;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: stretch;
-    position: relative;
     z-index: 1;
 }
 
+/************************ Fluid-Panel ************************/
+
 #fluid-background {
-    width: 100%;
-    height: 100vh;
-    top: 10vh;
-    position: fixed;
+    position: absolute;
     z-index: -1;
 }
 
 #fluid-canvas {
-    width: 100%;
-    height: 100vh;
-    background: black;
-    position: fixed;
+    position: absolute;
+    background: green;
 }
+
+/************************ Make Fluid-Config-Panel invisible ************************/
 
 .dg.ac {
     display: none;
 }
 
-audio {
-    flex-grow: 1;
-    z-index: 3;
+/************************ Carousel ************************/
+
+/************************ Navigation-Bar Selection-Bubble ************************/
+
+.selection-bubble {
+    position: absolute;
+    background: orange;
+    transform: scale(1.5);
+    transition: all 0.1s ease-in;
+    border-radius: 1rem;
+    z-index: -2;
 }
 
-#audio-button {
-    flex-grow: 1;
-    z-index: 3;
-}
-
-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section h2 {
-    font-size: 5rem;
-    color: white;
-}
+/************************ Profile-Section ************************/
 
 .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.02));
+    z-index: 1;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    min-height: 100vh;
+}
+
+.profile-description-div {
     flex-grow: 1;
 
-    min-height: 100vh;
-    width: 90%;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4));
-    z-index: 2;
+    width: 40rem;
+    height: 100vh;
 }
+
+.profile-description-div h3 {
+    text-align: center;
+    color: whitesmoke;
+
+    transform: translateY(100%) scale(1.0);
+    opacity: 0.0;
+    animation: show-profile-description 0.9s ease forwards .2s;
+}
+
+.profile-img {
+    flex-grow: 1;
+    
+    margin: 3rem;
+    border-radius: 50%;
+    width: 20rem;
+
+    transform: translateY(-100%) scale(0.5);
+    transition: all 0.3s ease;
+    animation: show-profile-img 0.9s ease forwards .1s;
+}
+
+.profile-img:hover {
+    border-radius: 0px;
+    border: 0px solid rgba(0, 0, 0, 0.5);
+}
+
+@keyframes show-profile-img {
+    from {
+        transform: translateY(-100%) scale(0.5);
+        border: 0px solid rgba(0, 0, 0, 0.5);
+
+    }
+    to {
+        transform: translateY(0rem) scale(1.0);
+        border: .5rem solid rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes show-profile-description {
+    from {
+        transform: translateY(100%);
+        opacity: 0.0;
+    }
+    to {
+        transform: translate(0rem);
+        opacity: 1.0;
+    }
+}
+
+@keyframes scale-profile-img {
+    to{
+        transform: scale(1.2);
+    }
+}
+
+/************************ Projects-Section ************************/
 
 .projects-section {
     flex-grow: 1;
     min-height: 100vh;
-    width: 90%;
+    width: 100%;
     background: linear-gradient(to right bottom, rgba(255, 215, 0, 0.6), rgba(255, 215, 0, 0.8));
     z-index: 2;
 }
 
+/************************ Skills-Section ************************/
+
 .skills-section {
-    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 
     min-height: 100vh;
-    width: 90%;
+    width: 100%;
     background: linear-gradient(to right bottom, rgba(138, 43, 226, 0.6), rgba(138, 43, 226, 0.8));
     z-index: 2;
 }
 
+.skills-section .card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+    height: 300px;
+}
+
+/************************ Resume-Section ************************/
+
 .resume-section {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 
     min-height: 100vh;
-    width: 90%;
-    background: linear-gradient(to right bottom, rgba(0, 128, 0, 0.6), rgba(0, 128, 0, 0.8));
+    width: 100%;
+    background: linear-gradient(to right bottom, rgba(107, 255, 62, 0.658), rgba(138, 43, 226, 0.8));
     z-index: 2;
 }
 
+.resume-section h2, .resume-section h3 {
+    text-align: center;
+}
+
+.resume-section h5 {
+    text-align: center;
+}
+
+/************************ Contact-Section ************************/
+
 .contact-section {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 
     min-height: 100vh;
-    width: 90%;
+    width: 100%;
     background: linear-gradient(to right bottom, rgba(25, 25, 112, 0.6), rgba(25, 25, 112, 0.8));
     z-index: 2;
 }

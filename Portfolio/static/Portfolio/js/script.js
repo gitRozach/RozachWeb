@@ -42,7 +42,7 @@ const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
 
 let config = {
-    SIM_RESOLUTION: 128,
+    SIM_RESOLUTION: 64,
     DYE_RESOLUTION: 1024,
     CAPTURE_RESOLUTION: 512,
     DENSITY_DISSIPATION: 1,
@@ -1438,7 +1438,7 @@ function splat (x, y, dx, dy, color) {
 }
 
 function correctRadius (radius) {
-    let aspectRatio = canvas.width / canvas.height;
+    let aspectRatio = canvas.clientWidth / canvas.clientHeight;
     if (aspectRatio > 1)
         radius *= aspectRatio;
     return radius;
@@ -1534,13 +1534,13 @@ function updatePointerUpData (pointer) {
 }
 
 function correctDeltaX (delta) {
-    let aspectRatio = canvas.width / canvas.height;
+    let aspectRatio = canvas.clientWidth / canvas.clientHeight;
     if (aspectRatio < 1) delta *= aspectRatio;
     return delta;
 }
 
 function correctDeltaY (delta) {
-    let aspectRatio = canvas.width / canvas.height;
+    let aspectRatio = canvas.clientWidth / canvas.clientHeight;
     if (aspectRatio > 1) delta /= aspectRatio;
     return delta;
 }
@@ -1629,7 +1629,7 @@ function hashCode (s) {
 };
 
 
-const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+/*const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
 const audioAnalyser = audioContext.createAnalyser();
 audioAnalyser.fftSize = 512;
@@ -1656,10 +1656,10 @@ const audioGain = audioContext.createGain();
 
 audioTrack.connect(audioGain);
 audioTrack.connect(audioContext.destination);
-audioTrack.connect(audioAnalyser);
+audioTrack.connect(audioAnalyser);*/
 
 /*let config = {
-    SIM_RESOLUTION: 128,
+    SIM_RESOLUTION: 64,
     DYE_RESOLUTION: 1024,
     CAPTURE_RESOLUTION: 512,
     DENSITY_DISSIPATION: 1,
@@ -1776,10 +1776,10 @@ function visualizeAudioFrequency() {
     }
 }
 
-//Fluid-Simulation
+/*Fluid-Simulation
 setInterval(() => {
     visualizeAudioFrequency();
-}, 50);
+}, 50);*/
 
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
 ga.l=+new Date;

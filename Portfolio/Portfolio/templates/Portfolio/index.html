@@ -1,0 +1,275 @@
+{% extends 'Portfolio/base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+
+{% block bodyBlock %}
+<main id="main">
+    <!-- PROFILE SECTION -->
+    <section data-index="0" id="profile-section" class="profile-section">
+        <!-- FLUID BACKGROUND -->
+        <canvas class="w-100 h-100" id="fluid-canvas"></canvas>
+
+        <div class="profile-container">
+
+            <div class="mw-20 mh-20 profile-picture-div">
+                <img class="profile-img" src="{% static 'Portfolio/img/profile-pictures/Profile_Picture_1.jpg' %}">
+            </div>
+            
+            <div class="profile-description-div">
+                <h3>Roman Kindler</h2>
+                <h3>Aachen, Germany</h3>
+                <h3>IVU Traffic Technologies GmbH</h3>
+                <h3>Student Trainee</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section data-index="1" id="resume-section" class="resume-section">
+        <div>
+            <h2>IVU Traffic Technologies GmbH</h2>
+            <h3>Student Trainee - Software-Engineering</h3>
+            <h5>Since 2019-02</h5>
+            <h5>Aachen, Germany</h5>
+        </div>
+
+        <div>
+            <h2>FH Aachen – University of Applied Sciences</h2>
+            <h3>Bachelor student - Computer Science</h3>
+            <h5>Since 2018-09</h5>
+            <h5>Aachen, Germany</h5>
+        </div>
+
+        <div>
+            <h2>Technical University of Munich</h2>
+            <h3>Bachelor student - Computer Science</h3>
+            <h5>2017-10 - 2018-09</h5>
+            <h5>Munich, Germany</h5>
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS SECTION -->
+    <section data-index="2" id="skills-section" class="skills-section">
+        <div class="card" style="width: 33rem;">
+            <div class="card-img-top">
+                <h5>Python Image</h5>
+            </div>
+            <div class="card-body" data-bs-toggle="modal" data-bs-target="#pythonModal">
+                <p class="card-text">PyQt5</p>
+                <p class="card-text">Django</p>
+                <p class="card-text">PyTest</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 33rem;">
+            <div class="card-img-top">
+                <h5>Java Image</h5>
+            </div>
+            <div class="card-body" data-bs-toggle="modal" data-bs-target="#javaModal">
+                <p class="card-text">JavaFX</p>
+                <p class="card-text">JFoenix</p>
+                <p class="card-text">SQL</p>
+                <p class="card-text">RabbitMQ</p>
+                <p class="card-text">JUnit</p>
+            </div>
+        </div>  
+
+        <div class="card" style="width: 33rem;">
+            <div class="card-img-top">
+                <h5>C++ Image</h5>
+            </div>
+            <div class="card-body" data-bs-toggle="modal" data-bs-target="#cppModal">
+                <p class="card-text">STL</p>
+                <p class="card-text">Qt</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 33rem;">
+            <div class="card-img-top">
+                <h5>JavaScript Image</h5>
+            </div>
+            <div class="card-body" data-bs-toggle="modal" data-bs-target="#javascriptModal">
+                <p class="card-text">ES6</p>
+                <p class="card-text">JQuery</p>
+                <p class="card-text">React</p>
+                <p class="card-text">Processing.js</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 33rem;">
+            <div class="card-img-top">
+                <h5>HTML Image</h5>
+            </div>
+            <div class="card-body" data-bs-toggle="modal" data-bs-target="#htmlModal">
+                <p class="card-text">HTML5</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 33rem;">
+            <div class="card-img-top">
+                <h5>CSS Image</h5>
+            </div>
+            <div class="card-body" data-bs-toggle="modal" data-bs-target="#cssModal">
+                <p class="card-text">CSS3</p>
+                <p class="card-text">Bootstrap</p>
+                <p class="card-text">SASS</p>
+            </div>
+        </div>          
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+    <section data-index="3" id="projects-section" class="projects-section">
+        <h2>Projects</h2>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section data-index="4" id="contact-section" class="contact-section">
+        
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">                    
+                <div class="carousel-item active">
+                    <img src="{% static 'Portfolio/img/picture2.jpg' %}" class="d-block w-100 round-item" alt="...">
+                </div>
+            
+                <div class="carousel-item">
+                    <img src="{% static 'Portfolio/img/picture3.png' %}" class="d-block w-100 round-item" alt="...">
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="{% static 'Portfolio/img/picture4.jpg' %}" class="d-block w-100 round-item" alt="...">
+                </div>
+            </div>
+            
+            <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            
+            <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </section>        
+</main>
+
+<!-- Python-Modal -->
+<div class="modal fade" id="pythonModal" tabindex="-1" aria-labelledby="pythonModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pythonModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Python Content</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Java-Modal -->
+<div class="modal fade" id="javaModal" tabindex="-1" aria-labelledby="javaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="javaModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Java Content</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- C++-Modal -->
+<div class="modal fade" id="cppModal" tabindex="-1" aria-labelledby="cppModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cppModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>C++ Content</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript-Modal -->
+<div class="modal fade" id="javascriptModal" tabindex="-1" aria-labelledby="javascriptModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="javascriptModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>JavaScript Content</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HTML-Modal -->
+<div class="modal fade" id="htmlModal" tabindex="-1" aria-labelledby="htmlModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="htmlModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>HTML Content</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CSS-Modal -->
+<div class="modal fade" id="cssModal" tabindex="-1" aria-labelledby="cssModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cssModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>CSS Content</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'Portfolio/js/animated-logo/animated-logo.js' %}"></script>
+<script type="text/javascript" src="{% static 'Portfolio/js/fluid-simulator/dat.gui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'Portfolio/js/smooth-scrolling/smooth-scrolling.js' %}"></script>    
+<script type="text/javascript" src="{% static 'Portfolio/js/script.js' %}"></script>
+
+{% endblock %}

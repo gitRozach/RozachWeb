@@ -10,6 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+
+"""     React
+npm init -y
+npm i webpack webpack-cli --save-dev
+npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+npm i react react-dom --save-dev
+npm install @material-ui/core
+npm install @babel/plugin-proposal-class-properties
+npm install react-router-dom
+npm install @material-ui/icons
+"""
+
 import os
 from pathlib import Path
 
@@ -39,8 +51,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'jquery',
+    'bootstrap4',
     'Portfolio',
     'AlgoVisualizer',
+    'Cloud',
     'SpotifyWebPlayer',
 ]
 

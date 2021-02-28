@@ -30,25 +30,25 @@ var resumeLink = document.querySelector('.resume-link');
 var contactLink = document.querySelector('.contact-link');
 
 logoLink.addEventListener('click', function() {
-    smoothScroll('.profile-section', 500);
+    smoothScroll('.profile-section', 1000);
 });
 
 profileLink.addEventListener('click', function() {
-    smoothScroll('.profile-section', 500);
+    smoothScroll('.profile-section', 1000);
 });
 
 projectsLink.addEventListener('click', function() {
-    smoothScroll('.projects-section', 500);
+    smoothScroll('.projects-section', 1000);
 });
 
 skillsLink.addEventListener('click', function() {
-    smoothScroll('.skills-section', 500);
+    smoothScroll('.skills-section', 1000);
 });
 
 resumeLink.addEventListener('click', function() {
-    smoothScroll('.resume-section', 500);
+    smoothScroll('.resume-section', 1000);
 });
 
 contactLink.addEventListener('click', function() {
-    smoothScroll('.contact-section', 500);
+    smoothScroll('.contact-section', 1000);
 });
