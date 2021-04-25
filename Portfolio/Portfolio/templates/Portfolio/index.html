@@ -13,11 +13,11 @@
         <div class="profile-container">
 
             <div class="mw-20 mh-20 profile-picture-div">
-                <img class="profile-img" src="{% static 'Portfolio/img/profile-pictures/Profile_Picture_1.jpg' %}">
+                <img class="profile-img" src="{% static 'Portfolio/img/profile-pictures/Profile_Picture_1.jpg' %}"/>
             </div>
             
             <div class="profile-description-div">
-                <h3>Roman Kindler</h2>
+                <h3>Roman Kindler</h3>
                 <h3>Aachen, Germany</h3>
                 <h3>IVU Traffic Technologies GmbH</h3>
                 <h3>Student Trainee</h3>
@@ -28,25 +28,29 @@
 
     <!-- RESUME SECTION -->
     <section data-index="1" id="resume-section" class="resume-section">
-        <div>
-            <h2>IVU Traffic Technologies GmbH</h2>
-            <h3>Student Trainee - Software-Engineering</h3>
-            <h5>Since 2019-02</h5>
-            <h5>Aachen, Germany</h5>
+
+        <i class="resume-icon fas fa-briefcase"></i>
+        <div class="card-body">
+            <h3 class="card-title">IVU Traffic Technologies GmbH</h3>
+            <h4 class="card-text">Student Trainee - Software-Engineering</h4>
+            <h4 class="card-text"><small class="text-muted">Since 2019-02</small></h4>
+            <h4 class="card-text"><small class="text-muted">Aachen, Germany</small></h4>
         </div>
 
+        <i class="resume-icon fas fa-university"></i>
         <div>
-            <h2>FH Aachen – University of Applied Sciences</h2>
-            <h3>Bachelor student - Computer Science</h3>
-            <h5>Since 2018-09</h5>
-            <h5>Aachen, Germany</h5>
+            <h3>FH Aachen – University of Applied Sciences</h3>
+            <h4>Computer Science - Bachelor student</h4>
+            <h4 class="card-text"><small class="text-muted">Since 2018-09</small></h4>
+            <h4 class="card-text"><small class="text-muted">Aachen, Germany</small></h4>
         </div>
 
+        <i class="resume-icon fas fa-university"></i>
         <div>
-            <h2>Technical University of Munich</h2>
-            <h3>Bachelor student - Computer Science</h3>
-            <h5>2017-10 - 2018-09</h5>
-            <h5>Munich, Germany</h5>
+            <h3>Technical University of Munich</h3>
+            <h4>Computer Science - Bachelor student</h4>
+            <h4 class="card-text"><small class="text-muted">2017-10 - 2018-09</small></h4>
+            <h4 class="card-text"><small class="text-muted">Munich, Germany</small></h4>
         </div>
 
     </section>
@@ -96,7 +100,7 @@
                 <p class="card-text">ES6</p>
                 <p class="card-text">JQuery</p>
                 <p class="card-text">React</p>
-                <p class="card-text">Processing.js</p>
+                <p class="card-text">p5</p>
             </div>
         </div>
 
@@ -129,31 +133,9 @@
 
     <!-- CONTACT SECTION -->
     <section data-index="4" id="contact-section" class="contact-section">
-        
-        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">                    
-                <div class="carousel-item active">
-                    <img src="{% static 'Portfolio/img/picture2.jpg' %}" class="d-block w-100 round-item" alt="...">
-                </div>
-            
-                <div class="carousel-item">
-                    <img src="{% static 'Portfolio/img/picture3.png' %}" class="d-block w-100 round-item" alt="...">
-                </div>
-                
-                <div class="carousel-item">
-                    <img src="{% static 'Portfolio/img/picture4.jpg' %}" class="d-block w-100 round-item" alt="...">
-                </div>
-            </div>
-            
-            <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            
-            <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
+
+        <div id="contact-textarea-div">
+            <textarea></textarea>
         </div>
     </section>        
 </main>
@@ -267,6 +249,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/46d23e87c8.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{% static 'Portfolio/js/animated-logo/animated-logo.js' %}"></script>
 <script type="text/javascript" src="{% static 'Portfolio/js/fluid-simulator/dat.gui.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'Portfolio/js/smooth-scrolling/smooth-scrolling.js' %}"></script>    

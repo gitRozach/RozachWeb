@@ -3,7 +3,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: consolas;
+    font-family: Cinzel;
+}
+
+::selection {
+    color: #7b03fc;
+    background: transparent;
+  }
+
+.resume-icon {
+    font-size: 300px;
+    color: red;
+    transform: scale(1);
+    transition: all .3s ease-in;
+}
+
+.resume-icon:hover {
+    color: yellow;
+    transform: scale(1.05);
+}
+
+.resume-card {
+    background: transparent;
+    border: 0px solid transparent;
+}
+
+.resume-card .row, .resume-card .card-body{
+    background: transparent;
 }
 
 /************************ Modal ************************/
@@ -272,6 +298,7 @@ body {
 }
 
 .profile-description-div h3 {
+    font-family: Cinzel;
     text-align: center;
     color: whitesmoke;
 
@@ -374,11 +401,7 @@ body {
     z-index: 2;
 }
 
-.resume-section h2, .resume-section h3 {
-    text-align: center;
-}
-
-.resume-section h5 {
+.resume-section h1, .resume-section h2, .resume-section h3, .resume-section h4, .resume-section h5 {
     text-align: center;
 }
 
@@ -395,4 +418,8 @@ body {
     width: 100%;
     background: linear-gradient(to right bottom, rgba(25, 25, 112, 0.6), rgba(25, 25, 112, 0.8));
     z-index: 2;
+}
+
+.contact-textarea-div {
+    width: 1000px;
 }
