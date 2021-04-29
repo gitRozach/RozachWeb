@@ -21,8 +21,9 @@ from .views import indexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('algorithm-visualizations/', include('AlgoVisualizer.urls')),
-    path('spotify-web-player/', include('SpotifyWebPlayer.urls')),
+    path('algorithms/', include('AlgoVisualizer.urls')),
+    path('spotify-player/', include('SpotifyWebPlayer.urls')),
     path('cloud/', include('Cloud.urls')),
+    path('sudoku-game/', include('SudokuGame.urls')),
     path('', indexView),
 ]

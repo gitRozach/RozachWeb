@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rozach - Sudoku Game</title>
+    <link rel="icon" href="{% static 'SudokuGame/img/favicon.ico' %}" type="image/x-icon"></link>
+    <link rel="stylesheet" href="{% static 'SudokuGame/scss/style.css' %}"></link>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <div class="sudoku-grid">
+            <ul id="grid-list">    
+            </ul>
+            <input id="solve-button" type="button" value="SOLVE"/>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{% static 'SudokuGame/js/sudoku-oo.js' %}"></script>
+</body>
+
+</html>

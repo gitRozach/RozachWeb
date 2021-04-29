@@ -3,9 +3,9 @@ import { render } from "react-dom";
 
 export default class App extends Component {
     render() {
-        return <h1>Testing React Code</h1>;
+        return (<h1>Testing React Code</h1>);
     }
 }
 
-const appContainer = document.getElementById("app");
-render(<App/>, appContainer);
+const AppContainer = document.getElementById("app");
+render(<App/>, AppContainer);

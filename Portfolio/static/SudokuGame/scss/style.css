@@ -1,0 +1,137 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Avenir, Heveltica, sans-serif;
+}
+
+.sudoku-grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background: gray;
+}
+
+li:nth-child(n):nth-child(-n+9) {
+  border-top-width: 4px;
+}
+
+li:nth-child(n+73):nth-child(-n+81) {
+  border-bottom-width: 4px;
+}
+
+li:nth-child(3n) {
+  border-right-width: 4px;
+}
+
+li:nth-child(9n+1) {
+  border-left-width: 4px;
+}
+
+li:nth-child(n+19):nth-child(-n+27) {
+  border-bottom-width: 4px;
+}
+
+li:nth-child(n+46):nth-child(-n+54) {
+  border-bottom-width: 4px;
+}
+
+ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (5vw)[9];
+      grid-template-columns: repeat(9, 5vw);
+  -ms-grid-rows: (5vw)[9];
+      grid-template-rows: repeat(9, 5vw);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-gap: 0rem;
+  list-style: none;
+  margin: 0 0 2vw;
+  padding: 0;
+  font-size: calc(2vw + 10px);
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Zen Dots';
+}
+
+li span {
+  margin-top: 0.4rem;
+}
+
+@-webkit-keyframes li-hover {
+  from {
+    background-color: white;
+    font-size: 2rem;
+    color: black;
+  }
+  to {
+    background-color: black;
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+@keyframes li-hover {
+  from {
+    background-color: white;
+    font-size: 2rem;
+    color: black;
+  }
+  to {
+    background-color: black;
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+li:hover {
+  -webkit-animation: li-hover 0.3s forwards;
+          animation: li-hover 0.3s forwards;
+}
+
+.note {
+  background: white;
+  font-family: monospace;
+  padding: 2em 5em;
+  font-size: 120%;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+@supports (display: grid) {
+  .note {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

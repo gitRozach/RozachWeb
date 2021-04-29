@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'AlgoVisualizer',
     'Cloud',
     'SpotifyWebPlayer',
+    'SudokuGame',
 ]
 
 MIDDLEWARE = [
