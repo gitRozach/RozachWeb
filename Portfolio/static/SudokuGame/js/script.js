@@ -46,12 +46,12 @@ let config = {
     DYE_RESOLUTION: 1024,
     CAPTURE_RESOLUTION: 512,
     DENSITY_DISSIPATION: 1,
-    VELOCITY_DISSIPATION: 0.2,
+    VELOCITY_DISSIPATION: 0.5,
     PRESSURE: 0.8,
     PRESSURE_ITERATIONS: 20,
     CURL: 30,
-    SPLAT_RADIUS: 0.1,
-    SPLAT_FORCE: 2000,
+    SPLAT_RADIUS: 0.3,
+    SPLAT_FORCE: 1000,
     SHADING: true,
     COLORFUL: true,
     COLOR_UPDATE_SPEED: 10,
@@ -1408,8 +1408,8 @@ function splatPointer (pointer) {
 }
 
 function multipleSplats (amount) {
-    const color = generateColor();
     for (let i = 0; i < amount; i++) {
+        const color = generateColor();
         color.r *= 10.0;
         color.g *= 10.0;
         color.b *= 10.0;

@@ -180,7 +180,7 @@ class SudokuGUI {
         for (var i = 0; i < this.sudokuLength * this.sudokuLength; ++i) {
             var x = i % this.sudokuLength + 1;
             var y = Math.floor(i / this.sudokuLength) + 1;
-            updateCell(x, y, solution[y - 1][x - 1]);
+            updateCell(x, y, sudokuSolution[y - 1][x - 1]);
             await sleep_async(15);
         }
     }

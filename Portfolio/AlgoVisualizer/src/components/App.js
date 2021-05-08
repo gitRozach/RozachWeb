@@ -1,11 +1,13 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React from 'react';
 
-export default class App extends Component {
-    render() {
-        return (<h1>Testing React Code</h1>);
-    }
+function App() {
+    return (
+        <div className="App">
+            <div className="content">
+                <h1>App Components lol with React!</h1>
+            </div>
+        </div>
+    );
 }
 
-const AppContainer = document.getElementById("app");
-render(<App/>, AppContainer);
+export default App;
