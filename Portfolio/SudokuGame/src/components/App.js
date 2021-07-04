@@ -1,16 +1,18 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 
-class Help extends Component {
-  render() {
+function App() {
     return (
-      <div>
-        <input type="text" label="Help"/> 
-      </div>
+        <div>
+            <div>
+                <h1>App Components lol</h1>
+            </div>
+        </div>
+        /*<div>
+            <ul id="grid-list">
+                
+            </ul>
+        </div>*/
     );
-  }
 }
-ReactDOM.render(     
-  <Help />,
-  document.getElementById('Help-modal')        
-);
+
+export default App;

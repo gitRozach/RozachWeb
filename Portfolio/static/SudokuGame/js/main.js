@@ -378,7 +378,7 @@ function keyPressed(event) {
 }
 
 function splatCell(cell) {
-    const color = generateColor();
+    const color = {r: 0, g: 0, b: 0};//generateColor();
     const cellWidth = cell.getBoundingClientRect().width;
     const cellHeight = cell.getBoundingClientRect().height;
     const relX = (cell.getBoundingClientRect().left + cellWidth * 0.5) / window.innerWidth;
@@ -416,7 +416,7 @@ function mouseMoved(event) {
 }
 
 function onStart() {
-    startTimer();
+    // startTimer();
 }
 
 /* 
@@ -573,7 +573,7 @@ function main() {
     document.addEventListener("click", mouseClicked);
     // document.addEventListener("mousemove", mouseMoved)
 
-    drawGrid();
+    // drawGrid();
     onStart();
 }
 

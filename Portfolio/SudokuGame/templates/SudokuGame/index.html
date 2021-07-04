@@ -17,23 +17,13 @@
 </head>
 
 <body>
-    <div class="preloader" id="preloader">
-    </div>
-    <div id="main">
-        <canvas class="w-100 h-100" id="fluid-canvas"></canvas>
-        <div class="sudoku-grid">
-            <ul id="grid-list"></ul>
-            <div class="sudoku-controls">
+    <div class="preloader" id="preloader"></div>
+    <canvas class="w-100 h-100" id="fluid-canvas"></canvas>
 
-                <div class="sudoku-controls"><i class="fas fa-check"></i></div>
-                <div class="sudoku-controls"><a class="control-button" id="time-button"><span></span><span></span><span></span><span></span> </a></div>
-                <div class="sudoku-controls"><a class="control-button" id="delete-button"><span></span><span></span><span></span><span></span>Delete</a></div>
-                <div class="sudoku-controls"><a class="control-button" id="solve-button"><span></span><span></span><span></span><span></span>Solve</a></div>
-                <div class="sudoku-controls"><a class="control-button" id="check-button"><span></span><span></span><span></span><span></span>Check</a></div>
-                <div class="sudoku-controls"><a class="control-button" id="hint-button"><span></span><span></span><span></span><span></span>Hint</a></div>
-            </div>
+    <main id="main">
+        <div id="root">
         </div>
-    </div>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
